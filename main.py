@@ -5,9 +5,14 @@ from divide import divide
 
 def main():
     while True:
-        num_a = int(input("Ingrese el primer número: "))
-        num_b = int(input("Ingrese el segundo número: "))
-
+        try:
+            num_a = int(input("Ingrese el primer número: "))
+            num_b = int(input("Ingrese el segundo número: "))
+        except:
+            print("Error, valor ingresado incorrecto.")
+            print("Saliendo del programa...")
+            break
+        
         print("¿Que operación desea realizar?")
         print("1. Sumar")
         print("2. Restar")
@@ -30,4 +35,5 @@ def main():
             break
         else:
             print("Opción inválida.")
+            print("Saliendo del programa...")
 main()
